@@ -1,3 +1,6 @@
-Task 0
+Task 0 Complexity: O(1)
+We are accessing a certain index of the array and is independent from the size
 
-Complexity: O(1) since we are accessing a certain index of the array and is independent from the size
+Task 1 Complexity: O(n)
+Each for loop iterates from 1 to n of each array. With 2 loops, the complexity comes to be O(2n).
+As n can possibly be a large size, the coefficient does not make much of a difference, so making it linear time complexity with O(n).
