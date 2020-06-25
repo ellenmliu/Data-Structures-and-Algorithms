@@ -1,0 +1,3 @@
+Task 0
+
+Complexity: O(1) since we are accessing a certain index of the array and is independent from the size
