@@ -4,3 +4,7 @@ We are accessing a certain index of the array and is independent from the size
 Task 1 Complexity: O(n)
 Each for loop iterates from 1 to n of each array. With 2 loops, the complexity comes to be O(2n).
 As n can possibly be a large size, the coefficient does not make much of a difference, so making it linear time complexity with O(n).
+
+Task 2 Complexity: O(n)
+The for loop around the array is O(n). The max function is O(n) complexity because it would iterate through the dictionary n times, coming to O(2n).
+As mentioned in the previous task about O(2n), this task is linear complexity with O(n).
