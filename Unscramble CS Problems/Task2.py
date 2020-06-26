@@ -1,7 +1,3 @@
-"""
-Read file into texts and calls.
-It's ok if you don't understand how to read files
-"""
 import csv
 from datetime import datetime
 from collections import defaultdict
