@@ -11,4 +11,8 @@ As mentioned in the previous task about O(2n), this task is linear complexity wi
 
 Task 3 Complexity: O(n log n)
 The sorted method worst case is O(n log n). With the 2 independent for loops and count method, the total is O(n log n + 3n).
-However with the same theory that as n becomes a larger input, the coefficient does not make much of a different and n log n has significantly more difference impact than n, which simplifies it to O(n log n)
+However with the same theory that as n becomes a larger input, the coefficient does not make much of a different and n log n has significantly more difference impact than n, which simplifies it to O(n log n).
+
+Task 4 Complexity: O(n log n)
+The sorted method worst case is O(n log n). With the 3 independent for loops, the total is O(n log n + 3n).
+Like the previous task, this simplifies it to O(n log n).
