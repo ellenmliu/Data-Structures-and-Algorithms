@@ -55,5 +55,10 @@ for caller, receiver, date, duration in calls:
 
 print("The numbers called by people in Bangalore have codes:")
 sortedAreaCodes = sorted(set(areaCode))
+
 for code in sortedAreaCodes:
     print(code)
+
+fixedLineReciever = areaCode.count('080')
+
+print('{} percent of calls from fixed lines in Bangalore are calls to other fixed lines in Bangalore.'.format(round(fixedLineReciever * 100 / len(areaCode), 2)))
