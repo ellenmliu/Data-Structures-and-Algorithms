@@ -3,6 +3,7 @@ Read file into texts and calls.
 It's ok if you don't understand how to read files.
 """
 import csv
+import re
 
 with open('texts.csv', 'r') as f:
     reader = csv.reader(f)
@@ -43,3 +44,16 @@ Print the answer as a part of a message::
 to other fixed lines in Bangalore."
 The percentage should have 2 decimal digits
 """
+areaCode = set()
+
+for caller, receiver, date, duration in calls:
+    if re.search(r'^\(0[0-9]+\)', caller):
+        if re.search(r'^140', receiver):
+            areaCode.add('140')
+        else:
+            areaCode.add(re.split(r'\)|^140|\s', receiver)[0].strip('('))
+
+print("The numbers called by people in Bangalore have codes:")
+sortedAreaCodes = sorted(areaCode)
+for code in sortedAreaCodes:
+    print(code)
