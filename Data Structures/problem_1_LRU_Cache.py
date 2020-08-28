@@ -108,16 +108,16 @@ def original_test_case():
     our_cache.set(4, 4);
 
     actual = our_cache.get(1)
-    print("Get 1: {} ".format(actual) + "pass" if actual == 1 else "fail")
+    print("Get 1: {} ".format(actual), "pass" if actual == 1 else "fail")
     actual = our_cache.get(2)
-    print("Get 2: {} ".format(actual) + "pass" if actual == 2 else "fail")
+    print("Get 2: {} ".format(actual), "pass" if actual == 2 else "fail")
     actual = our_cache.get(9)
-    print("Get 9: {} ".format(actual) + "pass" if actual == -1 else "fail")
+    print("Get 9: {} ".format(actual), "pass" if actual == -1 else "fail")
     our_cache.set(5, 5)
     our_cache.set(6, 6)
 
     actual = our_cache.get(3)
-    print("Get 3: {} ".format(actual) + "pass" if actual == -1 else "fail")
+    print("Get 3: {} ".format(actual), "pass" if actual == -1 else "fail")
 
 def size_zero_test_case():
     print("\nSize Zero Test Case")
@@ -129,9 +129,9 @@ def size_zero_test_case():
     our_cache.set(4, 4);
 
     actual = our_cache.get(1)
-    print("Get 1: {} ".format(actual) + "pass" if actual == -1 else "fail")
+    print("Get 1: {} ".format(actual), "pass" if actual == -1 else "fail")
     actual = our_cache.get(2)
-    print("Get 2: {} ".format(actual) + "pass" if actual == -1 else "fail")
+    print("Get 2: {} ".format(actual), "pass" if actual == -1 else "fail")
 
 def bigger_test_case():
     print("\nBigger Test Case")
@@ -140,7 +140,7 @@ def bigger_test_case():
     our_cache.set(10, 1);
 
     actual = our_cache.get(10)
-    print("Get 10: {} ".format(actual) + "pass" if actual == 1 else "fail")
+    print("Get 10: {} ".format(actual), "pass" if actual == 1 else "fail")
 
     our_cache.set(22, 2);
     our_cache.set(33, 3);
@@ -148,7 +148,7 @@ def bigger_test_case():
     our_cache.set(555555, 5);
 
     actual = our_cache.get(1)
-    print("Get 1: {} ".format(actual) + "pass" if actual == -1 else "fail")
+    print("Get 1: {} ".format(actual), "pass" if actual == -1 else "fail")
 
     our_cache.set(11, 1);
     our_cache.set(20, 2);
@@ -158,11 +158,11 @@ def bigger_test_case():
     our_cache.set(6, 6);
 
     actual = our_cache.get(10)
-    print("Get 10: {} ".format(actual) + "pass" if actual == -1 else "fail")
+    print("Get 10: {} ".format(actual), "pass" if actual == -1 else "fail")
     actual = our_cache.get(555555)
-    print("Get 555555: {} ".format(actual) + "pass" if actual == 5 else "fail")
+    print("Get 555555: {} ".format(actual), "pass" if actual == 5 else "fail")
     actual = our_cache.get(33)
-    print("Get 33: {} ".format(actual) + "pass" if actual == 3 else "fail")
+    print("Get 33: {} ".format(actual), "pass" if actual == 3 else "fail")
 
 
 original_test_case()
