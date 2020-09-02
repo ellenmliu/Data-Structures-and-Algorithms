@@ -42,12 +42,41 @@ class LinkedList:
         return size
 
 def union(llist_1, llist_2):
-    # Your Solution Here
-    pass
+    present = set()
+    result = LinkedList()
+    next = llist_1.head
+
+    while next:
+        if next.value not in present:
+            present.add(next.value)
+            result.append(next.value)
+        next = next.next
+
+    next = llist_2.head
+    while next:
+        if next.value not in present:
+            present.add(next.value)
+            result.append(next.value)
+        next = next.next
+    return result
 
 def intersection(llist_1, llist_2):
-    # Your Solution Here
-    pass
+    present = set()
+    result = LinkedList()
+    next = llist_1.head
+
+    while next:
+        if next.value not in present:
+            present.add(next.value)
+        next = next.next
+
+    next = llist_2.head
+    while next:
+        if next.value in present:
+            result.append(next.value)
+            present.remove(next.value)
+        next = next.next
+    return result
 
 
 # Test case 1
@@ -74,6 +103,40 @@ linked_list_4 = LinkedList()
 
 element_1 = [3,2,4,35,6,65,6,4,3,23]
 element_2 = [1,7,8,9,11,21,1]
+
+for i in element_1:
+    linked_list_3.append(i)
+
+for i in element_2:
+    linked_list_4.append(i)
+
+print (union(linked_list_3,linked_list_4))
+print (intersection(linked_list_3,linked_list_4))
+
+# Test case 3
+
+linked_list_3 = LinkedList()
+linked_list_4 = LinkedList()
+
+element_1 = [6,5,4,3,2,1]
+element_2 = []
+
+for i in element_1:
+    linked_list_3.append(i)
+
+for i in element_2:
+    linked_list_4.append(i)
+
+print (union(linked_list_3,linked_list_4))
+print (intersection(linked_list_3,linked_list_4))
+
+# Test case 4
+
+linked_list_3 = LinkedList()
+linked_list_4 = LinkedList()
+
+element_1 = []
+element_2 = [1,2,3,4,5,6]
 
 for i in element_1:
     linked_list_3.append(i)
