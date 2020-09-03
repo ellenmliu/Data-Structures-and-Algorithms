@@ -41,7 +41,8 @@ def is_user_in_group(user, group):
     if user in group.get_users():
         return True
     for sub_group in group.get_groups():
-        return is_user_in_group(user, sub_group);
+        if is_user_in_group(user, sub_group):
+            return True
     return False
 
 test_cases = [
