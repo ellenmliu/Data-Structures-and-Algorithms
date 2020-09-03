@@ -88,9 +88,9 @@ class LRU_Cache(object):
                     del self.cache[oldest]
                 else:
                     return
-            new_node = Node(key,value)
-            self.cache[key] = new_node
-            self.order.enqueue(new_node)
+        new_node = Node(key,value)
+        self.cache[key] = new_node
+        self.order.enqueue(new_node)
 
     def __repr__(self):
         s = ""
@@ -164,7 +164,58 @@ def bigger_test_case():
     actual = our_cache.get(33)
     print("Get 33: {} ".format(actual), "pass" if actual == 3 else "fail")
 
+def another_test_case():
+    print("\nAnother Test Case")
+    our_cache=LRU_Cache(3)
+    our_cache.set(1,1)
+    our_cache.set(2,2)
+    our_cache.set(3,3)
+    our_cache.set(4,4)
+
+    actual = our_cache.get(4)
+    print("Get 4: {} ".format(actual), "pass" if actual == 4 else "fail")
+
+    actual = our_cache.get(1)
+    print("Get 1: {} ".format(actual), "pass" if actual == -1 else "fail")
+
+    our_cache.set(2,4)
+
+    actual = our_cache.get(2)
+    print("Get 2: {} ".format(actual), "pass" if actual == 4 else "fail")
+
+def edge_test_cases():
+    print("\nAnother Test Case")
+    our_cache=LRU_Cache(3)
+    our_cache.set(1, "1")
+
+    actual = our_cache.get(1)
+    print("Get 1: {} ".format(actual), "pass" if actual == "1" else "fail")
+
+    our_cache.set(2, None)
+
+    actual = our_cache.get(2)
+    print("Get 2: {} ".format(actual), "pass" if actual == None else "fail")
+
+    actual = our_cache.get("")
+    print("Get : {} ".format(actual), "pass" if actual == -1 else "fail")
+
+    our_cache.set(2, 1)
+
+    actual = our_cache.get(2)
+    print("Get 2: {} ".format(actual), "pass" if actual == 1 else "fail")
+
+    our_cache.set(3, "Testing")
+    our_cache.set(4, "Test")
+
+    actual = our_cache.get(1)
+    print("Get 1: {} ".format(actual), "pass" if actual == -1 else "fail")
+    actual = our_cache.get(3)
+    print("Get 1: {} ".format(actual), "pass" if actual == "Testing" else "fail")
+
+
 
 original_test_case()
 size_zero_test_case()
 bigger_test_case()
+another_test_case()
+edge_test_cases()
