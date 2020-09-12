@@ -1,4 +1,4 @@
-Time Complexity: O(log(n))
+Time Complexity: O(log(n)) where n is the number of elements
 Space Complexity: O(1)
 
 For this problem, in order to stay within O(log(n)) time complexity, I decided to implement similarly to a Binary Search where the start will be at the minimum, 1, and the end to be at max, number, since the square root will never be greater than the number. We would basically take the middle of the start and end and see if that is the square root. If not, the middle number will either be the start or end depending if the quotient is bigger or smaller than the number respectively. We would continue doing the binary search until the start and end are right next to each other and we will return the smaller number because we are taking the floored number. Space complexity is O(1) because I'm only storing the start, mid, end, and ans as integers.
