@@ -1,7 +1,3 @@
-# from ipywidgets import widgets
-# from IPython.display import display
-# from ipywidgets import interact
-
 ## Represents a single node in the Trie
 class TrieNode:
     def __init__(self):
@@ -65,25 +61,22 @@ wordList = [
 for word in wordList:
     MyTrie.insert(word)
 
-
+print("prefix:", "ant")
 prefixNode = MyTrie.find("ant")
-print('\n'.join(prefixNode.suffixes()))
-prefixNode = MyTrie.find("f")
-print('\n'.join(prefixNode.suffixes()))
-prefixNode = MyTrie.find("t")
-print('\n'.join(prefixNode.suffixes()))
-prefixNode = MyTrie.find("")
-print('\n'.join(prefixNode.suffixes()))
-prefixNode = MyTrie.find(None)
-print(prefixNode)
+print('\n'.join(prefixNode.suffixes())) # should print '', 'hology', 'agonist', 'onym' all on new line
 
-# def f(prefix):
-#     if prefix != '':
-#         prefixNode = MyTrie.find(prefix)
-#         if prefixNode:
-#             print('\n'.join(prefixNode.suffixes()))
-#         else:
-#             print(prefix + " not found")
-#     else:
-#         print('')
-# interact(f,prefix='');
+print("\nprefix:", "f")
+prefixNode = MyTrie.find("f")
+print('\n'.join(prefixNode.suffixes()))  # should print 'un', 'unction', 'actory' all on new line
+
+print("\nprefix:", "t")
+prefixNode = MyTrie.find("t")
+print('\n'.join(prefixNode.suffixes()))  # should print 'rie', 'rigger', 'rigonometry', 'ripod' all on new line
+
+print("\nprefix:", "")
+prefixNode = MyTrie.find("")
+print('\n'.join(prefixNode.suffixes()))  # should print all of the words all on new line
+
+print("\nNone as prefix")
+prefixNode = MyTrie.find(None)
+print(prefixNode)  # should print 'Enter a string'
