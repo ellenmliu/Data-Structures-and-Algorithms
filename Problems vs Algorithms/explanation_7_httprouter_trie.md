@@ -14,7 +14,7 @@ RouteTrie Find Handler
 Time Complexity: O(n) where n is the number of directories in the path
 Space Complexity: O(1)
 
-To find the node, we have to iterate through each directories of the path and check if its in the Trie. That gives us time complexity of O(n). Storage is O(1) because we are only storing the current node that we are on.
+To find the node, we have to check through if the current directory is in the children, which is a list. We don't have to iterate through each level, which is usually different from the autocomplete Find method. That gives us time complexity of O(n) where n is the number of directories/folders in the path. Storage is O(1) because we are only storing the current node that we are on.
 --------------------------------------------------------------------------------
 Router Add Handler
 Time Complexity: O(n) where n is the number of directories in the path
